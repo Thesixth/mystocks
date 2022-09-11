@@ -6,7 +6,7 @@ import { StockContext } from '../context/stockContext'
 
 function StockList() {
     const [stock, setStock] = useState([])
-    const { watchList } = useContext(StockContext)
+    const { watchList, deleteStock } = useContext(StockContext)
 
     const changeColor = (c) => {
         return c > 0 ? "success":"danger" 
@@ -51,7 +51,7 @@ function StockList() {
     
 
   return (
-    <div>h
+    <div>
         <table className='table hover mt-5'>
             <thead>
                 <tr>
@@ -85,6 +85,10 @@ function StockList() {
                             <td>{stockData.data.l}</td>
                             <td>{stockData.data.o}</td>
                             <td>{stockData.data.pc}</td>
+                            <td><button className="btn btn-danger ml-3 d-inline-block delete-button"
+                            onClick={(e) => {
+                                e.stopPropagation()
+                                deleteStock(stockData.symbol)}}>Remove</button></td>
                         </tr>
                     )
                 })}
