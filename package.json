@@ -1,7 +1,7 @@
 {
   "name": "stocks",
   "version": "0.1.0",
-  "homepage": "https://thesixth.github.io/mystocks",
+  "homepage": "https://Thesixth.github.io/mystocks",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
