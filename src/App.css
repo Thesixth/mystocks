@@ -1,48 +1,49 @@
-/*.App {
+.App {
   text-align: center;
+  animation: fadeIn 5s;
+  padding: 20px 10px;
+}
+a {
+  display: block;
+  width: 10%;
+  margin-top: 2.5rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a:hover {
+  background-color: black;
   color: white;
+  box-shadow: 0 5px 90px rgba(0, 0, 0, 0.5);
+}
+
+.watchList {
+  margin: 1rem auto;
+  font-size: 1.8rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
-
 .delete-button {
   visibility: hidden;
-
 }
 
-.table-row:hover .delete-button{
+#search {
+  color: black;
+}
+
+.table-row:hover .delete-button {
   visibility: visible;
 }
